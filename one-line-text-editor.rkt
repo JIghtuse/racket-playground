@@ -144,7 +144,7 @@
     [(key=? "left" ke)
      (make-editor (string-remove-last (editor-pre e))
                   (string-append (string-last (editor-pre e)) (editor-post e)))]
-    [(and (key=? "right" ke) (not (empty? (editor-post e))))
+    [(key=? "right" ke)
      (make-editor (string-append (editor-pre e) (string-first (editor-post e)))
                   (string-rest (editor-post e)))]
     [(key=? "\b" ke)
